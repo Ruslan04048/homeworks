@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $sql = "INSERT INTO users (username, password) VALUES ('$newUsername', '$newPassword')";
     if (mysqli_query($connection, $sql)) {
-        header("Location: dashboard.php");
+        header("Location: panal.php");
     } else {
         echo "Ошибка при создании пользователя: " . mysqli_error($connection);
     }
